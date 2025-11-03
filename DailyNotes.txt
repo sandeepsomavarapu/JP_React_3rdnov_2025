@@ -1,0 +1,372 @@
+
+
+Javascript:
+
+variables
+functions
+object
+array
+events
+dom
+
+
+
+Day-1:
+========
+React:
+======
+angular		react
+framework/library--->
+
+book
+
+
+javascript-->react -->META
+
+
+			DOM
+			html	<h1>welcome to html</h1>--->Browser-->engine v8
+			
+
+		DOM tree
+	UI
+	
+	1)Component based architecture
+
+	2)virtual DOM --->performance in memory copy "diffing"
+
+	3)SPA
+	
+	4)JSX-->html+js function  .jsx
+	
+React:
+====== UI  18.x
+
+MVC--->view  jordan walke 2011
+ 
+		Facebook-->META
+virtual DOM:
+=============	
+	many JavaScript frameworks are available in the market(like angular, node), 
+	but still, React came into the market and gained popularity amongst them.
+	The previous frameworks follow the traditional data flow structure, 
+	which uses the DOM (Document Object Model).
+	DOM is an object which is created by the browser each time a web page is 
+	loaded. 
+	It dynamically adds or removes the data at the back end and when 
+	any modifications were done, then each time a new DOM is created for 
+	the same page. This repeated creation of DOM makes unnecessary memory 
+	wastage and reduces the performance of the application.
+	
+	ReactJS still used the same traditional data flow, but it is not directly 
+	operating on the browser's Document Object Model (DOM) immediately; 
+	instead, it operates on a virtual DOM.
+	It means rather than manipulating the document in a browser after changes to 
+	our data, it resolves changes on a DOM built and run entirely in memory. 
+	After the virtual DOM has been updated, React determines what changes made 
+	to the actual browser's DOM. 
+	The React Virtual DOM exists entirely in memory and is a representation 
+	of the web browser's DOM. Due to this, when we write a React component,
+	we did not write directly to the DOM;
+	
+	instead, we are writing virtual components that react will turn into the DOM.
+	
+WEBPACK:
+=========
+Webpack is used for module packaging, development, and production pipeline 
+automation. We will use webpack-dev-server during development,
+webpack to create production builds, and webpack CLI provides a set of commands.
+
+Babel:
+======
+
+Babel is a JavaScript compiler and transpiler used to convert one source code to
+others. It compiles React JSX and ES6 to ES5 JavaScript which can be run on 
+all browsers 
+		
+JSX
+Components
+One-way Data Binding
+Virtual DOM
+Simplicity
+Performance
+		JSX  	.jsx/js
+
+
+	NPM -->install node packages
+	
+	node -v
+	npm -v
+	npm install -g typescript
+	npm install -g @angular/cli
+	
+	npm install -g create-react-app
+	npm uninstall -g create-react-app
+	npm view react version
+	npx-->npx create-react-app demo
+	
+	ctrl + ~
+	
+	create-react-app projectname
+
+			
+Explore the project structure.
+
+package.json - The package.json file contains all the required dependencies for our React JS project. 
+Most importantly, you can check the current version of the Reatains index.html. As react ict that you are using. It has all the scripts to start, build, and eject our React app.
+public folder - The public folder cons used to build a single page application, we have this single HTML file to render all our components. Basically, it's an HTML template. It has a div element with id as root and all our components are rendered in this div with index.html as a single page for the complete react app.
+src folder- In this folder, we have all the global javascript and CSS files. All the different components that we will be building, sit here.
+index.js - This is the top renderer of your react app. 
+node_modules - All the packages installed by NPM or Yarn will reside inside the node_modules folder.
+App.js - The App.js file contains the definition of our App component which actually gets rendered in the browser and this is the root component.
+			
+	 // If you want to start measuring performance in your app, pass a function
+ // to log results (for example: reportWebVitals(console.log))
+ // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+	
+	server--->3000
+	
+	npm start-->to start server with by default port 3000
+	
+	 "scripts": {
+    "start": "set PORT=3006 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+  
+  or
+  
+  .env 
+  PORT=1234
+  
+Project Structure:
+====================  
+  package.json(nodejs)
+		 
+		 It comprises human-readable and functional information about the project, 
+		 such as the project name and description, the package version number, and a list of 
+		 dependencies needed by the application
+		 
+  package-lock.json 
+  
+		The package-lock.json is a lockfile that holds information on the dependencies or packages
+		installed for a node.js project, including their exact version numbers. 
+  Web Vitals
+		Based on CRA docs, CRA uses web-vital library for measuring web performance.
+		(for measuring site experience on Google).
+		Web vitals are a set of useful metrics that aim to capture the user experience of a web page.		
+  In React, setupTests.js and app.test.js are both related to testing, but they serve different purposes:
+
+setupTests.js:
+
+- This file is used to setup the testing environment.
+- It's typically used to configure the testing framework, such as Jest.
+- It's run before any tests are executed.
+- It's usually used to define global variables, mocks, or other test-related configurations.
+
+app.test.js:
+
+- This file contains the actual tests for your React application.
+- It's where you write test cases to verify the behavior of your components, functions, or other code.
+- It's run after the testing environment has been set up by setupTests.js.
+- It's usually used to test specific components, functionality, or user interactions.
+
+In summary, setupTests.js prepares the testing environment, while app.test.js contains the tests themselves.
+ 
+  
+	component-->app-->root component			class Login extends React.Component
+	building block of react app
+
+	reusability
+	
+	1.Functional component	//state less component props -->immuttable
+
+	2.class component   	//statefull component class Hello extends React.Component
+	
+			
+	
+JSX				class A --->function B -->state-->muttable`
+	
+	
+	<div>
+	
+			React.createElement("div","className","")
+	
+	
+				/*  bbbbbbb */
+				
+				BABEL---->CONVERTED JS CODE ....
+
+https://infoheap.com/online-react-jsx-to-javascript/
+
+	
+	
+	nodejs
+	
+		npm install @angular/cli
+		npm install create-react-app
+		
+		
+		npx create-react-app projectname
+		
+	npm start -->3000
+		
+		
+		Root Component-->APP
+		
+		
+		babel-->jsx-->browser-->JS
+		
+			
+		two types components
+		
+			1.class component    class classname extends Comonent   statefull
+									{
+									render()}
+			2.functional component		function Demo(){} state-->   stateless
+		
+				props
+		16.8
+		
+		
+		state	:container/variable  -->muttable
+		
+			1.state can be defined only inside class component usin this.state
+			2.state can be updatable	using this.setState
+			3.applicable only for class component
+			
+		props   :imuttable
+			1.props are imuttable
+			2.can access directly {props.name}
+			3.type error when we try to update props
+			
+			
+//rcc->react class component
+//rfc->react functional component
+//rafc->react arrow function component
+//rfcce->react functional component with export
+//rfce->react functional component with export default
+//rconst->react constructor
+
+functional component
+
+
+let-->block scope
+var-->function scope
+
+try both tasks using class and functional component
+
+task 1. send the data like id name salary from parent to child and update salary by converting into state in child
+
+task 2. increment+1,increment+5,increment+10,decrement-5,decrement-1,decrement-10
+	create buttons and update the state based on buttonclick
+	
+https://survey.zohopublic.com/zs/s8aq5H  day-1 feedback link
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			
+			
+		
+		functional -->state-->hooks
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
