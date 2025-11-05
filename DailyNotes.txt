@@ -31,7 +31,7 @@ javascript-->react -->META
 		DOM tree
 	UI
 	
-	1)Component based architecture
+	1)Component based architecture-->reusable
 
 	2)virtual DOM --->performance in memory copy "diffing"
 
@@ -45,6 +45,9 @@ React:
 MVC--->view  jordan walke 2011
  
 		Facebook-->META
+		
+		state
+		
 virtual DOM:
 =============	
 	many JavaScript frameworks are available in the market(like angular, node), 
@@ -227,7 +230,7 @@ https://infoheap.com/online-react-jsx-to-javascript/
 			2.functional component		function Demo(){} state-->   stateless
 		
 				props
-		16.8
+		16.8-->hooks-->[variable,setvariable]=useState(defaultstate)
 		
 		
 		state	:container/variable  -->muttable
@@ -258,11 +261,281 @@ var-->function scope
 try both tasks using class and functional component
 
 task 1. send the data like id name salary from parent to child and update salary by converting into state in child
-
+			this.state={props}
 task 2. increment+1,increment+5,increment+10,decrement-5,decrement-1,decrement-10
 	create buttons and update the state based on buttonclick
 	
 https://survey.zohopublic.com/zs/s8aq5H  day-1 feedback link
+
+
+Es6 features :
+===============
+
+let ,var,const
+rest/spread operator
+arrow functions
+default params
+multi line string
+classes
+promises async await
+
+
+
+HTML-->static web pages
+
+CSS->	
+
+
+		1.inline
+		2.internal
+		3.external-->
+		
+		
+		
+		
+			<h1 style="propname:propvalue">welcome to banglore</h1>
+		
+		
+		selector{proname:propvalue;propname:value}
+		
+			1.id selector
+			2.class selector
+			3.group 
+			4.all
+			5.element
+		
+		bootstrap.css-->twitter
+		
+		cdn
+		
+	Javascript-->dynamic
+	
+		front end validations
+		change html content
+		change css content
+		
+			html
+			css
+				
+			inline	--><body><script>
+			internal--><head><script>		
+			external-->.js
+			
+			
+			
+			ECMA-->sepcification
+			
+			
+			JS/TS
+			
+			
+let ,var,const
+rest/spread operator		--> ... rest-->gathering  spread-->expanding
+arrow functions
+default params
+multi line string  ``
+classes
+promises async await
+
+
+
+	javascript synchronous/async
+
+
+
+	javascript synchronous
+	
+	
+	console.log("1")
+	api call
+	console.log("2")
+
+
+	javascript-->async
+	
+		1.callback
+		
+		
+		
+		2.promise
+		
+		
+		
+		3.async/await
+	
+		map-->key
+
+Product
+npm i --save bootstrap
+
+npm i --save @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core
+
+
+
+FontAwesome:
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+index.html
+
+use html icons from
+
+https://fontawesome.com/icons/trash?o=r
+
+
+
+Forms-->
+	1.controlled form	-->React  state username-->FormIk
+	2.uncontrolled form -->DOM
+		
+	
+				onChange()
+	
+			const [name,setName]=useState("")
+	
+			<form>
+				username:<input type="text" value={name} onChange={()=>{}}>
+			
+			
+			</form>
+	
+	uncontrolled form -->DOM-->Reference
+	
+		const username=	useRef("")
+	
+			onChange()
+	
+			10==="10"
+	
+			<form>
+				username:<input type="text" ref={username} >
+
+			</form>
+			
+			
+	
+	
+	uncontrolled-->validations
+	
+	
+	Routing 
+	
+		npm install react-router-dom
+	
+		<BrowserRouter>
+	
+			<app>
+	
+		</BrowserRouter>
+		
+		
+		<Routes>
+		<Route path="/x" element={<y>}>
+		
+		
+		<Link to="/x">clickme<
+		
+		
+		routeparams
+		
+			useParams
+			
+			
+			app-->products/electronics/offer
+		
+		
+		
+		localstorage
+		
+		sessionstorage
+		
+		
+		
+		
+	stateless
+	
+
+		
+
+
+
+
+
+
+
+Form
+
+Task:create employee component complete with CRUD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	React
+	
+	
+		product crud
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	
+
+
+
 
  
 
