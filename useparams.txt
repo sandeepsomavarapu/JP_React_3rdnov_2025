@@ -1,0 +1,42 @@
+import { Routes, Route, Link, useParams } from "react-router-dom";
+
+// Component to show product details
+const ProductDetail = () => {
+  const { id,name} = useParams(); // Get the dynamic parameter from URL
+  return <h2>Product Details for Product ID: {id} {name}</h2>;
+};
+
+// Home page with links
+const Home = () => {
+  const products = [1, 2, 3];
+  const productName="Samsung"
+  return (
+    <div>
+      <h2>Products</h2>
+      <ul>
+        {products.map((p) => (
+          <li key={p.index}>
+            <Link to={`/product/${p}/${productName}`}>Product {p}</Link>
+          </li>
+        ))}
+      </ul>
+
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <div>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product/:id/:name" element={<ProductDetail />} />
+      </Routes>
+    </div>
+  );
+};
+
+export default App;
