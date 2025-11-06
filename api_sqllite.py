@@ -9,12 +9,16 @@ CORS(app)
 # Database initialization (creates file if not exists)
 DB_PATH = "employees.db"
 
+
+
+
 def get_db_connection():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row  # Enables dictionary-like access
     return conn
 
 # Create table if not exists
+
 with get_db_connection() as conn:
     conn.execute("""
         CREATE TABLE IF NOT EXISTS employees (
@@ -25,6 +29,19 @@ with get_db_connection() as conn:
         )
     """)
     conn.commit()
+    # Insert sample data if table is empty
+    cur = conn.execute("SELECT COUNT(*) as count FROM employees")
+    count = cur.fetchone()["count"]
+    if count == 0:
+        conn.executemany(
+            "INSERT INTO employees (name, department, salary) VALUES (?, ?, ?)",
+            [
+                ("Alice Smith", "Engineering", 75000),
+                ("Bob Johnson", "Marketing", 65000),
+                ("Carol Lee", "HR", 60000)
+            ]
+        )
+        conn.commit()
 
 # ✅ CRUD Endpoints
 
