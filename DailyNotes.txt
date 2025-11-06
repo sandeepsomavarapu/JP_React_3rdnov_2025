@@ -454,14 +454,64 @@ Forms-->
 		
 	stateless
 	
-
+	npm i axios
 		
+(mysql)py--->		Axios <--react ui(functional components)
+
+
+			
+	salt
+
+UI
+
+			REST
+
+		flask		react
+		app1 		app2
+
+
+						react
+					Axios--->get,post,put,delete
+					
+					useEffect()-->sideeffects--api
+				
+				
+				fetchemployees
+				
+				render
+				
+				useEffect(()=>{},[])
+
+				useEffect(()=>{},[state])
+
+				useEffect(()=>{})
+				
+				
+				
+				npm install axios
+				
+				
+				py
+				
+			pip	install 
+				
+				
+	npm install json-server
+	
+	
+	json-server --watch db.json   --port=2323
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
-
-
-
+				
 
 Form
 
@@ -471,7 +521,21 @@ Task:create employee component complete with CRUD
 
 
 
-
+ useEffect(() => {
+    const fetchEmployees = async () => {
+      try {
+        const response = await axios.get(baseUrl);
+        setEmployees(response.data);
+        const response1 = await axios.get('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+        console.log(response1.data);
+        const response2 = await axios.get('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+        console.log(response2.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchEmployees();
+  }, []);
 
 
 
