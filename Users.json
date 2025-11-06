@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "username": "johndoe",
+    "email": "john.doe@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "isActive": true,
+    "roles": ["admin", "editor"]
+  },
+  {
+    "id": 2,
+    "username": "janesmith",
+    "email": "jane.smith@example.com",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "isActive": false,
+    "roles": ["viewer"]
+  },
+  {
+    "id": 3,
+    "username": "petermartin",
+    "email": "peter.martin@example.com",
+    "firstName": "Peter",
+    "lastName": "Martin",
+    "isActive": true,
+    "roles": ["contributor"]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Mouse",
+    "price": 25.99,
+    "category": "Electronics"
+  },
+  {
+    "id": 2,
+    "name": "Bluetooth Headphones",
+    "price": 59.99,
+    "category": "Electronics"
+  },
+  {
+    "id": 3,
+    "name": "Coffee Maker",
+    "price": 89.50,
+    "category": "Home Appliances"
+  },
+  {
+    "id": 4,
+    "name": "Yoga Mat",
+    "price": 19.99,
+    "category": "Fitness"
+  },
+  {
+    "id": 5,
+    "name": "Desk Lamp",
+    "price": 34.75,
+    "category": "Home Decor"
+  }
+]
