@@ -1,39 +1,76 @@
-import React from 'react'
-
-const Login = () => {
-  const [username, setUsername] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  const [loginStatus, setLoginStatus] = React.useState(false);
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  const uname = localStorage.getItem("username");
-  const pass = localStorage.getItem("password");
-
-  if (username === uname && password === pass) {
-    alert("Login Success");
-    localStorage.setItem("token", "authenticated"); 
-    window.location.href = "/home"; 
-  } else {
-    alert("Login Failed");
-  }
-};
+import { Link, Routes, Route } from "react-router-dom"
+import Login from "./Components/Login"
+import Products from "./Components/Products"
+import Employees from "./Components/Employees"
+import About from "./Components/About"
+import Home from "./Components/Home"
+import Register from "./Components/Register"
+import EditEmployee from "./Components/EditEmployee"
+import AddEmployee from "./Components/AddEmployee"
+const Navbar = () => {
+  const isLoggedIn = localStorage.getItem("token");
   return (
     <div>
-      <form className='FormGroup m-3 p-3 border border-dark rounded' onSubmit={handleSubmit} >
-        <h2>Login Page</h2>
-        <div>
-          <label>Username: </label>
-          <input className='form-control' value={username} onChange={(e) => setUsername(e.target.value)} type="text" />
+      <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div className="container-fluid">
+          <ul className="navbar-nav">
+            {
+              !isLoggedIn &&
+              (
+                <>
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/login">Login</Link>
+                </li>
+                  <li className="nav-item">
+                    <Link className="nav-link active" to="/register">Register</Link>
+                  </li>
+                </>
+
+              )}
+
+            {
+            isLoggedIn && (
+              <>
+              <li className="nav-item">
+                <Link className="nav-link active" to="/products">Products</Link>
+              </li>
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/employees">Employees</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/about">About</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/home">Home</Link>
+                </li>
+
+                <li className="nav-item">
+                  <button className="nav-link active" onClick={() => {
+                    localStorage.removeItem("token")
+                    alert("Logged out successfully")
+                    window.location.href = "/login"
+                  }}>Logout</button>
+                </li>
+              </>
+            )}
+          </ul>
         </div>
-        <div>
-          <label>Password: </label>
-          <input className='form-control' value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
-        </div>
-        <button className='btn btn-primary' type="submit">Login</button>
-      </form>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/products" element={<Products />}></Route>
+        <Route path="/employees" element={<Employees />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/edit/:id" element={<EditEmployee />}></Route>
+        <Route path="/addemp" element={<AddEmployee />}></Route>
+
+      </Routes>
+
     </div>
   )
 }
 
-export default Login
+export default Navbar
