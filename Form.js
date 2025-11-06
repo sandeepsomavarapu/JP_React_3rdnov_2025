@@ -1,36 +1,37 @@
 import React from 'react'
-import { Link, Routes } from 'react-router-dom'
 
-const NavbarDemo = () => {
-    return (
-        <div>
-            <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
-                <div className="container-fluid">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link className="nav-link active" to="/login">Login</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link active" to="/register">Register</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link active" to="/employees">Employees</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link active" to="/products">Products</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link active" to="/home">Home</Link>
-                        </li>
+const Register = () => {
+ const [username, setUsername] = React.useState("");
+   const [password, setPassword] = React.useState("");
+   const [firstname, setFirstname] = React.useState("");
 
-                    </ul>
-                </div>
-            </nav>
+   const handleSubmit = (e) => {
+     e.preventDefault();
+     localStorage.setItem("username", username);
+     localStorage.setItem("password", password);
+      console.log("Registration Successful");
+   }
+ 
+   return (
+     <div>
+       <form className='FormGroup m-3 p-3 border border-dark rounded' onSubmit={handleSubmit} >
+         <h2>Registration Page</h2>
+         <div>
+           <label>Username: </label>
+           <input className='form-control' value={username} onChange={(e) => setUsername(e.target.value)} type="text" />
+         </div>
+         <div>
+           <label>Password: </label>
+           <input className='form-control' value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
+         </div>
+         <div>
+           <label>Firstname: </label>
+           <input className='form-control' value={firstname} onChange={(e) => setFirstname(e.target.value)} type="text" />
+         </div>
+         <button className='btn btn-primary' type="submit">Register</button>
+       </form>
+     </div>
+   )
+ }
 
-
-
-        </div>
-    )
-}
-
-export default NavbarDemo
+export default Register
