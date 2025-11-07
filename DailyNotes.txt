@@ -501,11 +501,79 @@ UI
 	
 	json-server --watch db.json   --port=2323
 	
+
+		app
+		
+		username="sandeep"
+			<home username={username}>
+
+		home
+
+
+
+					component state/application state
+props drilling
+
+state lifting
+
+		redux--->global state management tool
+
+				global state
+
+
+context api				createContext-->provider
+						useContext
+		redux
+		
+HOC
+
+		
+
+
+memo	-->useMemo	
+		
+devtools
+
+
+deployment		
+
+SALT usage
+
+
+Quiz
+
+
+
+
+
+salt ui
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 	
 	
-	
+	npm install @fontsource/open-sans
 	
 	
 
